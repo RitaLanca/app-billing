@@ -1,0 +1,1 @@
+export const YYYYMMMDD_FORMAT = 'YYYY-MM-DD';
