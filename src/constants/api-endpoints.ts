@@ -7,4 +7,6 @@ export const ANNUAL_INVOICES = 'annualInvoices';
 export const ANNUAL_REVENUE = 'annualRevenue';
 export const MONTHLY_REVENUE = 'monthlyRevenue';
 
+export const COMPLIANCE_REQUIREMENTS = 'complianceRequirements';
+
 
