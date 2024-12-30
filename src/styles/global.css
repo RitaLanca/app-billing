@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.5rem
+  }
+}
+
+@layer utilities {
+   /* Removes arrows in Chrome, Safari, Edge, Opera */
+   input[type="number"]::-webkit-outer-spin-button,
+   input[type="number"]::-webkit-inner-spin-button {
+     @apply appearance-none;
+   }
+ 
+   /* Removes arrows in Firefox */
+   input[type="number"] {
+     -moz-appearance: textfield;
+   }
+}
