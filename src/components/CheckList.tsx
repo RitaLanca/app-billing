@@ -17,6 +17,16 @@ const CheckList = ({
 }) => {
     const [requirements, setRequirements] = useState<any[]>([]);
 
+    const getDeadlineColor = (deadline: string): string => {
+        const today = new Date();
+        const targetDate = new Date(deadline);
+        const diffInDays = (targetDate.getTime() - today.getTime()) / (1000 * 60 * 60 * 24);
+      
+        if (diffInDays <= 5) return "text-red-600"; // Less than 3 days: red
+        if (diffInDays <= 15) return "text-yellow-600"; // 3-7 days: yellow
+        return "text-green-600"; // More than 7 days: green
+      };
+
     useEffect(()=> {
         setRequirements([...list]);
     }, [list]);
@@ -41,7 +51,7 @@ const CheckList = ({
                              <TableCell className={`font-medium w-fit ${item.done ? "line-through text-gray-500" : ""}`}>
                                 {item.name}
                             </TableCell>
-                             <TableCell className={item.done ? "line-through text-gray-500" : ""}>
+                             <TableCell className={`${item.done ? "line-through text-gray-500" : ""} ${!item.done && getDeadlineColor(item.deadline)}`}>
                                 {item.deadline}
                             </TableCell>
                             <TableCell>
