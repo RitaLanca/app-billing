@@ -7,6 +7,7 @@ import AnnualRevenueChart from '../containers/AnnualRevenueChart';
 import { annualRevenueProps, datasetProps } from '../types/charts';
 import MonthlyRevenueChart from '../containers/MonthlyRevenueChart';
 import Page from '../templates/Page';
+import RevenueChart from '@/containers/RevenueChart';
 
 
 
@@ -49,9 +50,8 @@ const Dashboard = () => {
                 />
             </div>
             {/* CHARTS */}
-            <div className='grid md:grid-cols-2 gap-5'>
-                {totalAnnualRevenue && <AnnualRevenueChart data={totalAnnualRevenue} />}
-                {monthlyRevenue && <MonthlyRevenueChart data={monthlyRevenue}/>}
+            <div>
+                <RevenueChart annualData={totalAnnualRevenue} monthlyData={monthlyRevenue}/>
             </div>
     </Page>
  );

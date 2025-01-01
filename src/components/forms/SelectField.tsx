@@ -9,7 +9,7 @@ interface Option {
 }
 
 interface SelectFieldProps extends React.ComponentProps<typeof Select> {
-    placeholder: string; // Placeholder para o SelectValue
+    placeholder?: string; // Placeholder para o SelectValue
     options: Option[];   // Lista de opções
     className?: string,
   }
