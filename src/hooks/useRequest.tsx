@@ -9,15 +9,15 @@ interface UseFetchResult {
 }
 
  
-const useRequest = (request: ()=> Promise<any>):UseFetchResult =>  {
+const useRequest = (request: any, { disabled = false }={}):UseFetchResult =>  {
     const [data, setData] = useState<any | null>(null);
     const [isPending, setIsPending] = useState<boolean>(true);
     const [error, setError] = useState<any | null>(null);
 
-    const getData = useCallback(async () => {
+    const getData = useCallback(async (...args) => {
         try {
           setIsPending(true);
-          const resp = await request();
+          const resp = await request(...args);
           setData(resp);
           return resp;
         } catch (err) {
@@ -28,10 +28,11 @@ const useRequest = (request: ()=> Promise<any>):UseFetchResult =>  {
         }
       }, [request]);
       
-    useEffect(() => {
-        getData();
-    }, []);
-
+      useEffect(() => {
+        if (!disabled) {
+          getData();
+        }
+      }, [disabled, getData]);
     return {
         data, 
         isPending, 
