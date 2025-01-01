@@ -658,5 +658,22 @@
       "done": true,
       "deadline": "2025-12-31"
     }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "name": "Product A",
+      "price": 1223
+    },
+    {
+      "id": "2",
+      "name": "Product B",
+      "price": 1500
+    },
+    {
+      "id": "3",
+      "name": "Product C",
+      "price": 2000
+    }
   ]
 }

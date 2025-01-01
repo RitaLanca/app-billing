@@ -9,4 +9,5 @@ export const MONTHLY_REVENUE = 'monthlyRevenue';
 
 export const COMPLIANCE_REQUIREMENTS = 'complianceRequirements';
 
+export const PRODUCTS = 'products';
 
