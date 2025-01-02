@@ -1,4 +1,4 @@
-import DataLineChart from '../components/charts/DataLineChart'
+import DataLineChart from '../components/Charts/DataLineChart'
 import { datasetProps, monthlyRevenueProps } from '../types/charts'
 
 interface monthlyRevenuePageProps {

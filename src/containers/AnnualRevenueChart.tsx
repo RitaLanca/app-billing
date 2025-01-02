@@ -1,4 +1,4 @@
-import DataBarChart from '../components/charts/DataBarChart';
+import DataBarChart from '../components/Charts/DataBarChart';
 import { datasetProps, annualRevenueProps } from '../types/charts';
 
 interface annualRevenuePageProps {

@@ -1,5 +1,5 @@
 import ChartCard from '@/components/ChartCard';
-import DataLineChart from '@/components/charts/DataLineChart';
+import DataLineChart from '@/components/Charts/DataLineChart';
 import SelectField from '@/components/forms/SelectField'
 import { annualRevenueProps, datasetProps, monthlyRevenueProps } from '@/types/charts';
 import { useState } from 'react'
