@@ -1,5 +1,3 @@
-import React from 'react'
-
 const CustomMonthlyTooltip = ({ active, payload, label }) => {
   const month = new Date(label).toLocaleString('default',{ month:'long'})
     if (active && payload && payload.length) {

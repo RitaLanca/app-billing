@@ -22,9 +22,9 @@ const CheckList = ({
         const targetDate = new Date(deadline);
         const diffInDays = (targetDate.getTime() - today.getTime()) / (1000 * 60 * 60 * 24);
       
-        if (diffInDays <= 5) return "text-red-600"; // Less than 3 days: red
-        if (diffInDays <= 15) return "text-yellow-600"; // 3-7 days: yellow
-        return "text-green-600"; // More than 7 days: green
+        if (diffInDays <= 5) return "text-red-600"; // Less than 5 days: red
+        if (diffInDays > 5 && diffInDays <= 15) return "text-yellow-600"; // 5-15 days: yellow
+        return "text-green-600"; // More than 15 days: green
       };
 
     useEffect(()=> {

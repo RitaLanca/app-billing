@@ -20,7 +20,7 @@ const RequirementsTabs = <T extends requirementProps,> ({
                 <CreateRequirementsDialog onCancel={()=>{}} onSubmit={handleCreate} categories={tabs} />  {/* Button and create dialog */}
             </TabsList>
                 {tabs?.map(tab =>  (
-                    <TabsContent value={tab.tabId}>
+                    <TabsContent value={tab.tabId}>                     
                         <CheckList 
                             key={tab.tabName} 
                             list={tab.tabContent} 

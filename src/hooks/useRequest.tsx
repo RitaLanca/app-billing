@@ -5,7 +5,7 @@ interface UseFetchResult {
     data: any | null,
     isPending: boolean,
     error: any | null,
-    request: () => Promise<any>,
+    request: (args?:string|number|string[]|number[]) => Promise<any>,
 }
 
  
@@ -14,7 +14,8 @@ const useRequest = (request: any, { disabled = false }={}):UseFetchResult =>  {
     const [isPending, setIsPending] = useState<boolean>(true);
     const [error, setError] = useState<any | null>(null);
 
-    const getData = useCallback(async (...args) => {
+    const getData = useCallback(async (...args: any) => {
+        console.log("args", args);
         try {
           setIsPending(true);
           const resp = await request(...args);
@@ -22,7 +23,7 @@ const useRequest = (request: any, { disabled = false }={}):UseFetchResult =>  {
           return resp;
         } catch (err) {
           setError(err);
-          throw err; // Retorna o erro para o chamador caso necessário
+          throw err;
         } finally {
           setIsPending(false);
         }
@@ -33,11 +34,12 @@ const useRequest = (request: any, { disabled = false }={}):UseFetchResult =>  {
           getData();
         }
       }, [disabled, getData]);
+      
     return {
         data, 
         isPending, 
         error, 
-        request:getData,
+        request:(...args) => getData(...args),
     }
 }
 

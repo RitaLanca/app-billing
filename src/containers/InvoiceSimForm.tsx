@@ -32,7 +32,7 @@ const InvoiceSimForm = ({
         name: 'products',
       });
 
-      const productsField = watch('products');
+    const productsField = watch('products');
 
     const mapToSelectOptions = (products: z.infer<typeof productRequestSchema>[]): SelectOption[] => products?.map(p => ({id: p.id, label: p.name}));
 

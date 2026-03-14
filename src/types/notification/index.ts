@@ -6,9 +6,9 @@ export interface NotificationProps {
   }
   
   export interface NotificationContextProps {
-    notifications: Notification[];
+    notifications: NotificationProps[];
     addNotification: (notification: NotificationProps) => void;
     markAsSeen: (id: string) => void;
     clearNotifications: () => void;
-    removeNotification: () => void;
+    removeNotification: (notification: NotificationProps) => void;
   }

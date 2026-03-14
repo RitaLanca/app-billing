@@ -1,8 +1,12 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { API_BASE, COMPLIANCE_REQUIREMENTS } from "@/constants/api-endpoints";
 
-export const getComplianceRequirements = async () => {
-    const resp = await fetch(`${API_BASE}/${COMPLIANCE_REQUIREMENTS}?_sort=deadline&_order=DESC`);
+export const getComplianceRequirements = async (nameFilter:string) => {
+    const params = new URLSearchParams('_sort=deadline&_order=DESC');
+    if(nameFilter) {
+      params.append("name", nameFilter.trim());
+    }
+    const resp = await fetch(`${API_BASE}/${COMPLIANCE_REQUIREMENTS}?${params}`);
     if(!resp.ok) throw new Error('Error fetching requirements');
 
     const response = await resp.json();

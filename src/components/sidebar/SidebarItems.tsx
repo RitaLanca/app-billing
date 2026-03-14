@@ -12,6 +12,7 @@ const SidebarItem = ({ icon:Icon, text, path}: SidebarProps ) => {
     const { expanded } = useSidebarContext();
     
 
+    
 
     return (
     <li className="group">

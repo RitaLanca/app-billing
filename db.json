@@ -1,60 +1,6 @@
 {
+  "$schema": "../node_modules/json-server/schema.json",
   "annualRevenue": [
-    {
-      "year": 2020,
-      "total": -250000,
-      "details": [
-        {
-          "date": "2020-01-01",
-          "value": 18000
-        },
-        {
-          "date": "2020-02-01",
-          "value": 17000
-        },
-        {
-          "date": "2020-03-01",
-          "value": 20000
-        },
-        {
-          "date": "2020-04-01",
-          "value": 16000
-        },
-        {
-          "date": "2020-05-01",
-          "value": 21000
-        },
-        {
-          "date": "2020-06-01",
-          "value": 18000
-        },
-        {
-          "date": "2020-07-01",
-          "value": 23000
-        },
-        {
-          "date": "2020-08-01",
-          "value": 22000
-        },
-        {
-          "date": "2020-09-01",
-          "value": 24000
-        },
-        {
-          "date": "2020-10-01",
-          "value": 25000
-        },
-        {
-          "date": "2020-11-01",
-          "value": 26000
-        },
-        {
-          "date": "2020-12-01",
-          "value": 28000
-        }
-      ],
-      "id": "9ec8"
-    },
     {
       "year": 2021,
       "total": 235000,
@@ -274,68 +220,178 @@
         }
       ],
       "id": "0cad"
+    },
+    {
+      "year": 2025,
+      "total": 350000,
+      "details": [
+        {
+          "date": "2025-01-01",
+          "value": 26000
+        },
+        {
+          "date": "2025-02-01",
+          "value": 24000
+        },
+        {
+          "date": "2025-03-01",
+          "value": 27000
+        },
+        {
+          "date": "2025-04-01",
+          "value": 23000
+        },
+        {
+          "date": "2025-05-01",
+          "value": 28000
+        },
+        {
+          "date": "2025-06-01",
+          "value": 25000
+        },
+        {
+          "date": "2025-07-01",
+          "value": 30000
+        },
+        {
+          "date": "2025-08-01",
+          "value": 27000
+        },
+        {
+          "date": "2025-09-01",
+          "value": 31000
+        },
+        {
+          "date": "2025-10-01",
+          "value": 32000
+        },
+        {
+          "date": "2025-11-01",
+          "value": 33000
+        },
+        {
+          "date": "2025-12-01",
+          "value": 34000
+        }
+      ],
+      "id": "rev2025"
+    },
+    {
+      "year": 2026,
+      "total": 380000,
+      "details": [
+        {
+          "date": "2026-01-01",
+          "value": 27000
+        },
+        {
+          "date": "2026-02-01",
+          "value": 26000
+        },
+        {
+          "date": "2026-03-01",
+          "value": 29000
+        },
+        {
+          "date": "2026-04-01",
+          "value": 25000
+        },
+        {
+          "date": "2026-05-01",
+          "value": 30000
+        },
+        {
+          "date": "2026-06-01",
+          "value": 27000
+        },
+        {
+          "date": "2026-07-01",
+          "value": 32000
+        },
+        {
+          "date": "2026-08-01",
+          "value": 29000
+        },
+        {
+          "date": "2026-09-01",
+          "value": 33000
+        },
+        {
+          "date": "2026-10-01",
+          "value": 34000
+        },
+        {
+          "date": "2026-11-01",
+          "value": 35000
+        },
+        {
+          "date": "2026-12-01",
+          "value": 36000
+        }
+      ],
+      "id": "rev2026"
     }
   ],
   "monthlyRevenue": [
     {
-      "date": "2024-01-01",
-      "value": 24000,
-      "id": "2e0e"
-    },
-    {
-      "date": "2024-02-01",
-      "value": 22000,
-      "id": "bdbe"
-    },
-    {
-      "date": "2024-03-01",
-      "value": 25000,
-      "id": "0dfd"
-    },
-    {
-      "date": "2024-04-01",
-      "value": 21000,
-      "id": "c3c0"
-    },
-    {
-      "date": "2024-05-01",
-      "value": 26000,
-      "id": "03d7"
-    },
-    {
-      "date": "2024-06-01",
-      "value": 24000,
-      "id": "2f67"
-    },
-    {
-      "date": "2024-07-01",
+      "date": "2026-01-01",
       "value": 27000,
-      "id": "d5dc"
+      "id": "m1"
     },
     {
-      "date": "2024-08-01",
-      "value": 25000,
-      "id": "6f2a"
+      "date": "2026-02-01",
+      "value": 26000,
+      "id": "m2"
     },
     {
-      "date": "2024-09-01",
+      "date": "2026-03-01",
       "value": 29000,
-      "id": "4a9a"
+      "id": "m3"
     },
     {
-      "date": "2024-10-01",
+      "date": "2026-04-01",
+      "value": 25000,
+      "id": "m4"
+    },
+    {
+      "date": "2026-05-01",
       "value": 30000,
-      "id": "0637"
+      "id": "m5"
     },
     {
-      "date": "2024-11-01",
-      "value": 31000,
-      "id": "e490"
+      "date": "2026-06-01",
+      "value": 27000,
+      "id": "m6"
     },
     {
-      "date": "2024-12-01",
+      "date": "2026-07-01",
+      "value": 32000,
+      "id": "m7"
+    },
+    {
+      "date": "2026-08-01",
+      "value": 29000,
+      "id": "m8"
+    },
+    {
+      "date": "2026-09-01",
+      "value": 33000,
+      "id": "m9"
+    },
+    {
+      "date": "2026-10-01",
       "value": 34000,
-      "id": "9054"
+      "id": "m10"
+    },
+    {
+      "date": "2026-11-01",
+      "value": 35000,
+      "id": "m11"
+    },
+    {
+      "date": "2026-12-01",
+      "value": 36000,
+      "id": "m12"
     }
   ],
   "annualInvoices": [
@@ -360,182 +416,182 @@
   ],
   "monthlyActiveClients": [
     {
-      "date": "2023-01-01",
+      "date": "2024-01-01",
       "value": 30,
       "id": "48e2"
     },
     {
-      "date": "2023-02-01",
+      "date": "2024-02-01",
       "value": 32,
       "id": "07a8"
     },
     {
-      "date": "2023-03-01",
+      "date": "2024-03-01",
       "value": 34,
       "id": "9978"
     },
     {
-      "date": "2023-04-01",
+      "date": "2024-04-01",
       "value": 36,
       "id": "b971"
     },
     {
-      "date": "2023-05-01",
+      "date": "2024-05-01",
       "value": 38,
       "id": "dc59"
     },
     {
-      "date": "2023-06-01",
+      "date": "2024-06-01",
       "value": 40,
       "id": "523d"
     },
     {
-      "date": "2023-07-01",
+      "date": "2024-07-01",
       "value": 42,
       "id": "34fe"
     },
     {
-      "date": "2023-08-01",
+      "date": "2024-08-01",
       "value": 44,
       "id": "fdba"
     },
     {
-      "date": "2023-09-01",
+      "date": "2024-09-01",
       "value": 46,
       "id": "da99"
     },
     {
-      "date": "2023-10-01",
+      "date": "2024-10-01",
       "value": 48,
       "id": "752d"
     },
     {
-      "date": "2023-11-01",
+      "date": "2024-11-01",
       "value": 50,
       "id": "d72c"
     },
     {
-      "date": "2023-12-01",
+      "date": "2024-12-01",
       "value": 52,
       "id": "7322"
     },
     {
-      "date": "2024-01-01",
+      "date": "2025-01-01",
       "value": 38,
       "id": "fba1"
     },
     {
-      "date": "2024-02-01",
+      "date": "2025-02-01",
       "value": 36,
       "id": "0ed5"
     },
     {
-      "date": "2024-03-01",
+      "date": "2025-03-01",
       "value": 40,
       "id": "d31b"
     },
     {
-      "date": "2024-04-01",
+      "date": "2025-04-01",
       "value": 34,
       "id": "8ea9"
     },
     {
-      "date": "2024-05-01",
+      "date": "2025-05-01",
       "value": 42,
       "id": "f24c"
     },
     {
-      "date": "2024-06-01",
+      "date": "2025-06-01",
       "value": 39,
       "id": "bc4f"
     },
     {
-      "date": "2024-07-01",
+      "date": "2025-07-01",
       "value": 44,
       "id": "fa93"
     },
     {
-      "date": "2024-08-01",
+      "date": "2025-08-01",
       "value": 46,
       "id": "75fd"
     },
     {
-      "date": "2024-09-01",
+      "date": "2025-09-01",
       "value": 48,
       "id": "8d93"
     },
     {
-      "date": "2024-10-01",
+      "date": "2025-10-01",
       "value": 50,
       "id": "fdf1"
     },
     {
-      "date": "2024-11-01",
+      "date": "2025-11-01",
       "value": 53,
       "id": "ceb4"
     },
     {
-      "date": "2024-12-01",
+      "date": "2025-12-01",
       "value": 55,
       "id": "8d20"
     },
     {
-      "date": "2025-01-01",
+      "date": "2026-01-01",
       "value": 57,
       "id": "009a"
     },
     {
-      "date": "2025-02-01",
+      "date": "2026-02-01",
       "value": 58,
       "id": "69ea"
     },
     {
-      "date": "2025-03-01",
+      "date": "2026-03-01",
       "value": 60,
       "id": "06c5"
     },
     {
-      "date": "2025-04-01",
+      "date": "2026-04-01",
       "value": 63,
       "id": "66f9"
     },
     {
-      "date": "2025-05-01",
+      "date": "2026-05-01",
       "value": 65,
       "id": "ff84"
     },
     {
-      "date": "2025-06-01",
+      "date": "2026-06-01",
       "value": 68,
       "id": "5a1a"
     },
     {
-      "date": "2025-07-01",
+      "date": "2026-07-01",
       "value": 70,
       "id": "2e70"
     },
     {
-      "date": "2025-08-01",
+      "date": "2026-08-01",
       "value": 73,
       "id": "656e"
     },
     {
-      "date": "2025-09-01",
+      "date": "2026-09-01",
       "value": 75,
       "id": "bc07"
     },
     {
-      "date": "2025-10-01",
+      "date": "2026-10-01",
       "value": 78,
       "id": "2a15"
     },
     {
-      "date": "2025-11-01",
+      "date": "2026-11-01",
       "value": 80,
       "id": "043d"
     },
     {
-      "date": "2025-12-01",
+      "date": "2026-12-01",
       "value": 83,
       "id": "36c5"
     }
@@ -550,6 +606,11 @@
       "year": 2025,
       "growth": 50.91,
       "id": "db3d"
+    },
+    {
+      "year": 2026,
+      "growth": 18.07,
+      "id": "growth2026"
     }
   ],
   "complianceRequirements": [
@@ -558,111 +619,125 @@
       "name": "Quarterly VAT Filing",
       "category": "Tax Reports",
       "done": true,
-      "deadline": "2024-01-15"
+      "deadline": "2025-01-15"
     },
     {
       "id": "4",
       "name": "Monthly Payroll Report",
       "category": "Legal Reports",
       "done": true,
-      "deadline": "2024-01-31"
+      "deadline": "2025-01-31"
     },
     {
       "id": "10",
       "name": "Board Meeting Minutes Submission",
       "category": "Legal Reports",
       "done": false,
-      "deadline": "2024-03-15"
+      "deadline": "2025-03-15"
     },
     {
       "id": "1",
       "name": "Submission of Annual Financial Report",
       "category": "Financial Reports",
-      "done": false,
-      "deadline": "2024-03-31"
+      "done": true,
+      "deadline": "2025-03-31"
     },
     {
       "id": "6",
       "name": "Annual Sustainability Report",
       "category": "Other Reports",
       "done": false,
-      "deadline": "2024-05-15"
+      "deadline": "2025-05-15"
     },
     {
       "id": "9",
       "name": "Year-End Tax Adjustments",
       "category": "Tax Reports",
-      "done": false,
-      "deadline": "2025-01-4"
+      "done": true,
+      "deadline": "2026-01-04"
     },
     {
       "id": "5",
       "name": "Data Protection Compliance Audit",
       "category": "Legal Reports",
-      "done": false,
-      "deadline": "2025-01-8"
+      "done": true,
+      "deadline": "2026-01-08"
     },
     {
       "id": "11",
       "name": "Annual Shareholder Meeting Documentation",
       "category": "Legal Reports",
       "done": true,
-      "deadline": "2025-02-28"
+      "deadline": "2026-02-28"
     },
     {
       "id": "15",
       "name": "Quarterly Compliance Review",
       "category": "Legal Reports",
-      "done": true,
-      "deadline": "2025-03-31"
+      "done": false,
+      "deadline": "2026-03-31"
     },
     {
       "id": "8",
       "name": "Environmental Compliance Certification",
       "category": "Other Reports",
       "done": false,
-      "deadline": "2025-04-30"
+      "deadline": "2026-04-30"
     },
     {
       "id": "12",
       "name": "Cybersecurity Risk Assessment",
       "category": "Other Reports",
       "done": false,
-      "deadline": "2025-06-01"
+      "deadline": "2026-02-01"
     },
     {
       "id": "3",
       "name": "Corporate Tax Return Submission",
       "category": "Tax Reports",
       "done": false,
-      "deadline": "2025-06-30"
+      "deadline": "2026-06-30"
     },
     {
       "id": "13",
       "name": "Mid-Year Financial Report",
       "category": "Financial Reports",
       "done": false,
-      "deadline": "2025-07-15"
+      "deadline": "2026-07-15"
     },
     {
       "id": "14",
       "name": "Annual Tax Reconciliation",
       "category": "Tax Reports",
       "done": false,
-      "deadline": "2025-12-31"
+      "deadline": "2026-12-31"
     },
     {
       "id": "7",
       "name": "Employee Health and Safety Training Records",
       "category": "Other Reports",
       "done": true,
-      "deadline": "2025-12-31"
+      "deadline": "2026-12-31"
     },
     {
-      "id": "33500a7e-2cab-4704-a506-1ca898a5f89b",
+      "id": "16",
       "name": "teste1",
       "category": "Legal Reports",
-      "deadline": "2025-01-03",
+      "deadline": "2026-01-03",
+      "done": false
+    },
+    {
+      "id": "17",
+      "name": "teste Finacial Reports",
+      "category": "Financial Reports",
+      "deadline": "2026-01-30",
+      "done": false
+    },
+    {
+      "id": "18",
+      "name": "Legal Report",
+      "category": "Legal Reports",
+      "deadline": "2026-01-20",
       "done": false
     }
   ],

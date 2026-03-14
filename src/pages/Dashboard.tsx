@@ -3,13 +3,9 @@ import { UsersIcon, ArrowTrendingUpIcon, BanknotesIcon, DocumentTextIcon} from '
 import { getActiveClientsByMonth, getAnnualClientGrowth } from '../api/activeClients';
 import { getAnnualInvoices, getAnnualRevenue, getMonthlyRevenue } from '../api/billing';
 import useRequest from '../hooks/useRequest';
-import AnnualRevenueChart from '../containers/AnnualRevenueChart';
 import { annualRevenueProps, datasetProps } from '../types/charts';
-import MonthlyRevenueChart from '../containers/MonthlyRevenueChart';
 import Page from '../templates/Page';
 import RevenueChart from '@/containers/RevenueChart';
-
-
 
 const Dashboard = () => {
   const {data: activeClients} = useRequest(getActiveClientsByMonth)

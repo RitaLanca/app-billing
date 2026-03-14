@@ -12,7 +12,6 @@ interface RevenueChartProps {
 
 const RevenueChart = ({ monthlyData, annualData }: RevenueChartProps) => {
     const [selectedOption, setSelectedOption] = useState('month')
-    console.log(selectedOption);
     const options = [
         {
             id:'month',
@@ -23,7 +22,6 @@ const RevenueChart = ({ monthlyData, annualData }: RevenueChartProps) => {
             label:'year',
         }
     ]
-
   return (
     <ChartCard>
             <div className='flex flex-col sm:flex-row justify-between items-center my-4 gap-2'>

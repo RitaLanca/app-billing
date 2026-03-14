@@ -12,7 +12,7 @@ const useDeadlineNotifications = () => {
     const deadlineMessage = (diffInDays: number, requirementName: string) => {
         if (diffInDays <=5 && diffInDays > 0) {
             return `Urgent: Deadline for "${requirementName}" is in ${Math.ceil(diffInDays)} days!`;
-        } else if (diffInDays > 3 && diffInDays <= 15) {
+        } else if (diffInDays > 5 && diffInDays <= 15) {
             return `Reminder: Deadline for "${requirementName}" is in ${Math.ceil(diffInDays)} days.`;
         }
         return undefined;
@@ -27,7 +27,6 @@ const useDeadlineNotifications = () => {
             const diffInDays = (targetDate.getTime() - today.getTime()) / (1000 * 60 * 60 * 24);
             
             const message = deadlineMessage(diffInDays, requirement.name);
-            console.log('message', message);
             if (message) {
                 const notif = {
                     id: requirement.id,
@@ -44,9 +43,10 @@ const useDeadlineNotifications = () => {
         refreshRequirements();
         clearNotifications();
         createNotifications();
-      }, [refreshRequirements, createNotifications]);
+    }, [refreshRequirements, createNotifications]);
     
-
+    
+    console.log('render component');
     useEffect(() => {
         if(requirements){
             clearNotifications();
