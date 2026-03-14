@@ -4,7 +4,7 @@ import { API_BASE, COMPLIANCE_REQUIREMENTS } from "@/constants/api-endpoints";
 export const getComplianceRequirements = async (nameFilter:string) => {
     const params = new URLSearchParams('_sort=deadline&_order=DESC');
     if(nameFilter) {
-      params.append("name", nameFilter.trim());
+      params.append("name", nameFilter.trim()); // TODO: with name_like is not working
     }
     const resp = await fetch(`${API_BASE}/${COMPLIANCE_REQUIREMENTS}?${params}`);
     if(!resp.ok) throw new Error('Error fetching requirements');

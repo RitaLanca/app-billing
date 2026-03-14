@@ -39,7 +39,7 @@ const useRequest = (request: any, { disabled = false }={}):UseFetchResult =>  {
         data, 
         isPending, 
         error, 
-        request:(...args) => getData(...args),
+        request: getData as any,
     }
 }
 

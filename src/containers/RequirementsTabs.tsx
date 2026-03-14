@@ -10,14 +10,13 @@ const RequirementsTabs = <T extends requirementProps,> ({
     handleDelete,
     handleCheck,
 }: RequirementTabsProps<T>) => {
-
     return(
-        <ShadcnTabs defaultValue={defaultTab || ''} className="w-full">
+        <ShadcnTabs key={defaultTab || 'empty'} defaultValue={defaultTab || ''} className="w-full">
             <TabsList className="flex justify-between">
                 <div>
                     {tabs?.map(tab => <TabsTrigger value={tab.tabId}>{tab.tabName}</TabsTrigger> )}
                 </div>
-                <CreateRequirementsDialog onCancel={()=>{}} onSubmit={handleCreate} categories={tabs} />  {/* Button and create dialog */}
+                {tabs?.length>0 && <CreateRequirementsDialog onCancel={()=>{}} onSubmit={handleCreate} categories={tabs} />}
             </TabsList>
                 {tabs?.map(tab =>  (
                     <TabsContent value={tab.tabId}>                     

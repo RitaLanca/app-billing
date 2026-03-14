@@ -38,7 +38,7 @@ const CreateRequirementsDialog =({
     useEffect(() => {
         reset({
             ...formState.defaultValues,
-            category: categories[0].tabName,
+            category: categories[0]?.tabName,
         })
         trigger();
 

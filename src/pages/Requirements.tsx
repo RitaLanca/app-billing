@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import useRequest from '@/hooks/useRequest';
 import Page from '../templates/Page';
 import RequirementsTabs from '@/containers/RequirementsTabs';
@@ -7,17 +7,18 @@ import { requirementProps, TabContentProps } from '@/types/requirements';
 import { toCamelCase } from '@/helpers/strings';
 import { FieldValues } from 'react-hook-form';
 import { v4 as uuidv4 } from 'uuid';
-import { useNotificationContext } from '@/hooks/useNotificationContext';
 import useDeadlineNotifications from '@/hooks/useDeadlineNotifications';
+import { SearchInput } from '@/components/Search';
 
 const Requirements = () => {
-  const { data, request:refreshRequirements } = useRequest(getComplianceRequirements);
+  const { data, request:refreshRequirements, isPending } = useRequest(getComplianceRequirements, {disabled:true});
   const { refreshNotifications } = useDeadlineNotifications();
   const [tabs, setTabs] = useState<TabContentProps<requirementProps>[]>([]);
- 
-  const defaultTab = tabs.length > 0 ? tabs[0].tabId : undefined; 
 
-  const groupRequirementsByCategory = arr =>  arr?.reduce((acc, currRequirement, index) => {
+  const defaultTab = tabs?.length > 0 ? tabs[0].tabId : undefined; 
+  console.log("default", defaultTab);
+
+  const groupRequirementsByCategory = arr =>  arr?.reduce((acc, currRequirement) => {
     const {category} = currRequirement;
     if(!acc[category]){ 
       acc[category] = [];
@@ -25,6 +26,7 @@ const Requirements = () => {
     acc[category].push(currRequirement);
     return acc;
   }, []);
+
 
   const buildTabsInfo = ():TabContentProps<requirementProps>[] => {
     const requirementGroups = groupRequirementsByCategory(data);
@@ -44,8 +46,8 @@ const Requirements = () => {
       done:false,
     } as requirementProps
     await createNewComplianceRequirement(newRequirement);
-    await refreshRequirements();
-    refreshNotifications();
+    await refreshRequirements(); // to update table list
+    refreshNotifications(); // to update notification list
   }
 
   const deleteRequirement = async(requirementId: string): Promise<void> => {
@@ -62,25 +64,37 @@ const Requirements = () => {
     await refreshRequirements();
     refreshNotifications();
   }
+  
+  const searchRequirements = useCallback((value: string) => {
+    if (value && value.trim().length > 0) {
+      refreshRequirements(value.trim());
+    } else {
+      refreshRequirements();
+    }
+  }, [refreshRequirements]);
 
   useEffect(() => {
-    if(data){
+    refreshRequirements();
+  }, [refreshRequirements]);
+
+  useEffect(() => {
       const result = data && buildTabsInfo();
       setTabs(result);
-    }
   }, [data]);
 
+  
   return (
     <Page title='Requirements'>
-         {tabs.length > 0 && (
-          <RequirementsTabs 
-            tabs={tabs} 
-            defaultTab={defaultTab} 
-            handleCreate={createNewRequirement}
-            handleDelete={deleteRequirement}  
-            handleCheck={checkRequirement}
-          />
-         )}
+      <div className='my-8'>
+        <SearchInput onSearch={searchRequirements} />
+      </div>
+      <RequirementsTabs 
+        tabs={tabs} 
+        defaultTab={defaultTab} 
+        handleCreate={createNewRequirement}
+        handleDelete={deleteRequirement}  
+        handleCheck={checkRequirement}
+      />
      </Page>
   )
 }
