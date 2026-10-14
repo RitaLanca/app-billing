@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite --host",
     "build": "tsc -b && vite build",
-    "start-dev-server": "npx json-server --watch db.json --port 8000",
+    "generate-db": "node scripts/generate-db.ts",
+    "start-dev-server": "npm run generate-db && npx json-server --watch db.json --port 8000",
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "jest"
